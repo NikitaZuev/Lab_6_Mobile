@@ -1,6 +1,12 @@
 package com.example.a.photogallery.model;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 public class Photo {
+    @PrimaryKey
+    @NonNull
     private String id;
 
     private String owner;
@@ -12,11 +18,12 @@ public class Photo {
     private Integer isfriend;
     private Integer isfamily;
 
+    @NonNull
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(@NonNull String id) {
         this.id = id;
     }
 
